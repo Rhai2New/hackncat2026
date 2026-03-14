@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Idea Feedback Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li>Main</li>
+            <li>See Your Feedback</li>
+            <li>View Your Reviews</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="submit-section">
+
+            <h1>Submit Your Idea</h1>
+            <p>Fill in the fields below and click submit when you are done.</p>
+
+            <form id="ideaForm">
+
+                <!-- Row 1 -->
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            placeholder="Enter your idea title"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="audience">Who is it for?</label>
+                        <input
+                            type="text"
+                            id="audience"
+                            name="audience"
+                            placeholder="Who is your target audience?"
+                        >
+                    </div>
+
+                </div>
+
+                <!-- Row 2 -->
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="problem">Problem:</label>
+                        <textarea
+                            id="problem"
+                            name="problem"
+                            placeholder="What problem does your idea address?"
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="solution">What does it solve?</label>
+                        <textarea
+                            id="solution"
+                            name="solution"
+                            placeholder="How does your idea fix the problem?"
+                        ></textarea>
+                    </div>
+
+                </div>
+
+                <!-- Submit area -->
+                <div class="submit-area">
+    <button type="submit">Submit Idea</button>
+    <p class="success" id="successMsg">✅ Idea submitted successfully!</p>
+
+    <div id="pitchSummaryBox" class="pitch-summary-box" style="display: none;">
+        <h3>Pitch Deck Summary</h3>
+        <p id="pitchSummaryText"></p>
+    </div>
+</div>
+
+            </form>
+
+        </div>
+
+        <!-- Community Ideas -->
+        <div class="ideas-feed">
+            <h2>Community Ideas</h2>
+            <p>Ideas submitted by other users will appear here.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
